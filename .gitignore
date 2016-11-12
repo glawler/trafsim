@@ -6,6 +6,22 @@
 .deps
 Makefile
 Makefile.in
+aclocal.m4
+autom4te.cache/
+config.h
+config.h.in
+config.log
+config.status
+config/
+configure
+stamp-h1
+test/main.log
+test/main.trs
+test/test-suite.log
+
+# build files.
+*.o
+src/trafsim
 
 # other
 clean.sh
