@@ -1,14 +1,23 @@
 A vechicle traffic simulator.
 
 Building:
----------
+=========
 
 If you have no configure: "autoreconf --install".
+./congfigure
 make
 make check
 
+One way to make a debug build:
+------------------------------
+mkdir -p debug/share
+echo 'CFLAGS="-ggdb -00" >> debug/share/config.site
+./configure --prefix=$(pwd)/debug
+make
+make check
+make install
+
+
 Maintainer:
------------
-
+===========
 Remove all autoconf files: make maintainer-really-clean.
-
