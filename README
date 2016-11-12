@@ -1,0 +1,14 @@
+A vechicle traffic simulator.
+
+Building:
+---------
+
+If you have no configure: "autoreconf --install".
+make
+make check
+
+Maintainer:
+-----------
+
+Remove all autoconf files: make maintainer-really-clean.
+
