@@ -1,2 +1,12 @@
+# editor cruft
 *~
+*.swp
+
+# autotools files.
+.deps
+Makefile
+Makefile.in
+
+# other
 clean.sh
+debug/*
