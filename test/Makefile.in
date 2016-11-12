@@ -405,8 +405,6 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 MAINTAINERCLEANFILES = Makefile.in
-testsubdir = test_build
-TESTS_ENVIRONMENT = top_builddir=$(top_builddir)
 TESTS = \
                         main.test
 

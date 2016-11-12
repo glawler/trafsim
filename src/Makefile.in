@@ -99,7 +99,8 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_trafsim_OBJECTS = main.$(OBJEXT)
+am_trafsim_OBJECTS = main.$(OBJEXT) vehicle.$(OBJEXT) \
+	vehicle_api.$(OBJEXT) bike.$(OBJEXT) bike_api.$(OBJEXT)
 trafsim_OBJECTS = $(am_trafsim_OBJECTS)
 trafsim_LDADD = $(LDADD)
 AM_V_P = $(am__v_P_@AM_V@)
@@ -243,7 +244,11 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 MAINTAINERCLEANFILES = Makefile.in
-trafsim_SOURCES = main.c
+trafsim_SOURCES = \
+	main.c \
+	vehicle.c vehicle.h vehicle_api.c vehicle_api.h \
+	bike.c bike.h bike_api.c bike_api.h
+
 all: all-am
 
 .SUFFIXES:
@@ -330,7 +335,11 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bike.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bike_api.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/vehicle.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/vehicle_api.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
