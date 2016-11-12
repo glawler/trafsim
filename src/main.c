@@ -11,10 +11,10 @@ int main(int argc, char **argv)
     move(v, 1, 2, 3);
     v = delete_vehicle(v);
 
-    struct bike *b = new_bike(); 
-    tick((struct vehicle*)b);
-    move((struct vehicle*)b, 4, 5, 6);
-    pedal(b); 
+    // struct bike *b = new_bike(); 
+    // tick((struct vehicle*)b);
+    // move((struct vehicle*)b, 4, 5, 6);
+    // pedal(b); 
 
     return(EXIT_SUCCESS);
 }
